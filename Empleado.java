@@ -6,6 +6,7 @@ public class Empleado {
     private String nombre;
     private float sueldo;
     private Scanner sc;
+    private static int empleados;
 
     // CONSTRUCTOR
     public Empleado() {
@@ -21,12 +22,14 @@ public class Empleado {
         nombre = sc.nextLine();
         System.out.println("Ingresa el sueldo del empleado:");
         sueldo = sc.nextFloat();
+        empleados++;
     }
 
     // Método de presentación en pantalla
     public void listar() {
         System.out.println("Los datos del empleado son los siguientes:");
         System.out.println("Nombre: " + nombre + ", Numero: " + nEmpleado + ", Sueldo: " + sueldo);
+        System.out.println("Numero total empleados: " + empleados);
     }
 
     // Métodos setter para actualizar atributos
