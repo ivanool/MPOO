@@ -13,7 +13,7 @@ public class Empleado {
         sc = new Scanner(System.in);
     }
 
-    // Métodos de captura
+    // Este código esta insertado en la clase Empleado
     public void capturar() {
         System.out.println("Ingresa el número del empleado:");
         nEmpleado = sc.nextInt();
@@ -22,14 +22,14 @@ public class Empleado {
         nombre = sc.nextLine();
         System.out.println("Ingresa el sueldo del empleado:");
         sueldo = sc.nextFloat();
-        empleados++;
+        // empleados++;
     }
 
     // Método de presentación en pantalla
     public void listar() {
         System.out.println("Los datos del empleado son los siguientes:");
         System.out.println("Nombre: " + nombre + ", Numero: " + nEmpleado + ", Sueldo: " + sueldo);
-        System.out.println("Numero total empleados: " + empleados);
+        // System.out.println("Numero total empleados: " + empleados);
     }
 
     // Métodos setter para actualizar atributos
@@ -59,3 +59,4 @@ public class Empleado {
     }
 }
 
+//aplicacion carbon para las imagenes con el codigo
