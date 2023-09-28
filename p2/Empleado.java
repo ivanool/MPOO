@@ -21,7 +21,7 @@ public class Empleado {
         System.out.println("Ingresa el nombre del empleado:");
         nombre = sc.nextLine();
         System.out.println("Ingresa el sueldo del empleado:");
-        sueldo = sc.nextFloat();
+        sueldo = sc.nextFloat();;
         // empleados++;
     }
 
