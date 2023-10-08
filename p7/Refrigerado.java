@@ -15,10 +15,19 @@ class Refrigerado extends Producto{
     super(nombre, caducidad, masa, lote);
     this.codigo_supervision = codigo_supervision;
   }
-  public void Capturar(){
+  public void Capturar() {
     super.Capturar();
-    codigo_supervision = JOptionPane.showInputDialog(null,
-            "Codigo de supervision: ","R E G I S T R O", JOptionPane.QUESTION_MESSAGE);
+    codigo_supervision = JOptionPane.showInputDialog(null, "Código de supervisión: ", "R E G I S T R O", JOptionPane.QUESTION_MESSAGE);
+    
+    try {
+      Integer.parseInt(codigo_supervision); // Intentamos convertir el código a un número entero
+    } catch (NumberFormatException e) {
+      JOptionPane.showMessageDialog(null, "Error: El código de supervisión debe ser un número entero.", "Error", JOptionPane.ERROR_MESSAGE);
+      codigo_supervision = "0"; // Asignamos un valor por defecto
+    }
+    
+    System.out.println(nombre + "," + caducidad + "," + masa + "," + cantidad + "," + lote + ","
+        + Fechaenvasado + "," + Paisdeorigen + "," + codigo_supervision);
   }
 
  

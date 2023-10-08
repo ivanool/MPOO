@@ -14,15 +14,26 @@ public class Fresco extends Producto {
         super(nombre, caducidad, masa, lote);
     }
    
-    public void Capturar(){
+public void Capturar() {
         super.Capturar();
-        Fechaenvasado = JOptionPane.showInputDialog(null,
-                "Fecha de envasado: ","R E G I S T R O", JOptionPane.QUESTION_MESSAGE);
-        Paisdeorigen = JOptionPane.showInputDialog(null,
-                "Pais de origen: ","R E G I S T R O", JOptionPane.QUESTION_MESSAGE);
-                System.out.println(nombre+","+caducidad+","+masa+","+cantidad+","+lote+","
-                        +Fechaenvasado+","+Paisdeorigen);
-    }
+        Fechaenvasado = JOptionPane.showInputDialog(null, "Fecha de envasado: ", "R E G I S T R O", JOptionPane.QUESTION_MESSAGE);
+        Paisdeorigen = JOptionPane.showInputDialog(null, "País de origen: ", "R E G I S T R O", JOptionPane.QUESTION_MESSAGE);
+        
+        try {
+                LocalDate.parse(Fechaenvasado); // Intentamos parsear la fecha
+        } catch (DateTimeParseException e) {
+                JOptionPane.showMessageDialog(null, "Error: La fecha de envasado debe tener el formato yyyy-MM-dd.", "Error", JOptionPane.ERROR_MESSAGE);
+                Fechaenvasado = "0000-00-00"; // Asignamos un valor por defecto
+        }
+        
+        if (Paisdeorigen.isEmpty()) { // Verificamos si el campo está vacío
+                JOptionPane.showMessageDialog(null, "Error: El país de origen no puede estar vacío.", "Error", JOptionPane.ERROR_MESSAGE);
+                Paisdeorigen = "Desconocido"; // Asignamos un valor por defecto
+        }
+        
+        System.out.println(nombre + "," + caducidad + "," + masa + "," + cantidad + "," + lote + ","
+                        + Fechaenvasado + "," + Paisdeorigen);
+}
     
      // haz un método listar pero no pongas iconos ni uses resizeIcon
 
