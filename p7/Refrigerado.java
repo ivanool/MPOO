@@ -26,8 +26,7 @@ class Refrigerado extends Producto{
       codigo_supervision = "0"; // Asignamos un valor por defecto
     }
     
-    System.out.println(nombre + "," + caducidad + "," + masa + "," + cantidad + "," + lote + ","
-        + Fechaenvasado + "," + Paisdeorigen + "," + codigo_supervision);
+    System.out.println(nombre + "," + caducidad + "," + masa + "," + lote + "," + codigo_supervision);
   }
 
  
