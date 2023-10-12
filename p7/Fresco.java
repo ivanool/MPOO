@@ -4,12 +4,10 @@ import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 
 public class Fresco extends Producto {
-    //atributos
     private String Fechaenvasado;
     private String Paisdeorigen;
     Scanner scan = new Scanner(System.in);
 
-        //constructor
     public Fresco(String nombre, String caducidad, float masa, int lote) {
         super(nombre, caducidad, masa, lote);
     }
@@ -20,17 +18,13 @@ public void Capturar() {
         Paisdeorigen = JOptionPane.showInputDialog(null, "País de origen: ", "R E G I S T R O", JOptionPane.QUESTION_MESSAGE);
         
         
-        if (Paisdeorigen.isEmpty()) { // Verificamos si el campo está vacío
+        if (Paisdeorigen.isEmpty()) { 
                 JOptionPane.showMessageDialog(null, "Error: El país de origen no puede estar vacío.", "Error", JOptionPane.ERROR_MESSAGE);
-                Paisdeorigen = "Desconocido"; // Asignamos un valor por defecto
+                Paisdeorigen = "Desconocido"; 
         }
         
         System.out.println(nombre + "," + caducidad + "," + masa + "," + cantidad + "," + lote + ","
                         + Fechaenvasado + "," + Paisdeorigen);
-}
-    
-     // haz un método listar pero no pongas iconos ni uses resizeIcon
-
         public void Listar(){
                 String info = "Nombre: " + nombre + "\n" +
                         "Caducidad: " + caducidad + "\n" +
@@ -41,9 +35,5 @@ public void Capturar() {
                         "Pais de origen: " + Paisdeorigen;
                 JOptionPane.showMessageDialog(null, info,
                         "Información del Producto", JOptionPane.INFORMATION_MESSAGE);
-        }
-
-
-            
-    
+        } 
 }
