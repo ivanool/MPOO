@@ -1,5 +1,5 @@
 
-public class Usb {
+public class Usb extends MedioLocal{
     Usb(){
        System.out.println("\tSe creo un objeto de tipo Usb");
     }

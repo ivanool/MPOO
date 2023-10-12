@@ -7,6 +7,7 @@ public class Registrador {
         Red almacenRed1, almacenRed2;
         
         //CREANDO OBJETOS
+        System.
         System.out.println("Creando el objeto Disco:");
         almacenDisco = new Disco();
         System.out.println("Creando el objeto Usb:");

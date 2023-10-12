@@ -1,5 +1,5 @@
 
-public class MedioLocal  {
+public class MedioLocal  extends MedioAlmacenamiento{
    MedioLocal(){
        System.out.println("\tSe creo un objeto de tipo MedioLocal");
    }
