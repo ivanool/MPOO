@@ -9,8 +9,19 @@ public class Taller {
         
         //CAPTURAR DATOS
         Motor m = new MotorElectrico();
-        m.capturarDatos();
-        //LISTAR DATOS
+        Motor mEx = new MotorExplosion();
+        Motor mv = new MotorVapor();
 
+  
+        //LISTAR DATOS
+        ArrayList <Motor> lista = new ArrayList<Motor>();
+        lista.add(m);
+        lista.add(mEx);
+        lista.add(mv);
+
+        for(Motor motor : lista){
+            motor.capturarDatos();
+            System.out.println(motor.toString());
+        }
     }
 }
